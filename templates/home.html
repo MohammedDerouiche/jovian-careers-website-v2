@@ -13,18 +13,24 @@
     </style>
 </head>
 <body>
+    {%include 'nav.html' %}
+    <img class="img-fluid" src="static/background" id="banner">
     <div class="container">
 
         <h1 class="text-center mt-2 mb-4"> Jovian Careers </h1>
-
-        <img class="img-fluid" src="static/background" id="banner">
-
-        <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-        <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean augue leo, bibendum vitae vulputate volutpat, malesuada nec velit. Sed eu risus ac diam euismod aliquet id pellentesque ligula. In sagittis sed orci et tempus. Nam ligula ipsum, volutpat non ullamcorper congue, euismod eget leo. Phasellus in nisi in urna bibendum tincidunt vitae ac magna. Cras odio quam, commodo ut nulla at, hendrerit sagittis dolor. Donec eget tempor sapien. Curabitur luctus interdum lectus, a gravida sem ullamcorper ut. Donec dignissim mattis sapien, ac elementum justo. Mauris sed turpis eu ligula consequat pulvinar dictum in lacus. Donec efficitur condimentum nulla, eu elementum arcu. Phasellus vehicula hendrerit malesuada. Nam in libero euismod, aliquet risus ut, accumsan ipsum. Proin interdum dui a lorem finibus imperdiet dignissim nec sem.
-
-        </p>
-        <h2 class="text-center mt-2 mb-4">Open Openings</h2>
+        
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+                <p class="lead">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean augue leo, bibendum vitae vulputate volutpat, malesuada nec velit. Sed eu risus ac diam euismod aliquet id pellentesque ligula. In sagittis sed orci et tempus. Nam ligula ipsum, volutpat non ullamcorper congue, euismod eget leo. Phasellus in nisi in urna bibendum tincidunt vitae ac magna. Cras odio quam, commodo ut nulla at, hendrerit sagittis dolor. Donec eget tempor sapien. Curabitur luctus interdum lectus, a gravida sem ullamcorper ut. Donec dignissim mattis sapien, ac elementum justo. Mauris sed turpis eu ligula consequat pulvinar dictum in lacus. Donec efficitur condimentum nulla, eu elementum arcu. Phasellus vehicula hendrerit malesuada. Nam in libero euismod, aliquet risus ut, accumsan ipsum. Proin interdum dui a lorem finibus imperdiet dignissim nec sem.
+                    
+                </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="/static/people.jpg" style="height:320px;border-radius: 4px;">
+            </div>
+        </div>
+            <h2 class="text-center mt-2 mb-4">Open Openings</h2>
         <div>
                 {% for job in jobs %}
                    {% include 'jobitem.html' %}
@@ -32,11 +38,9 @@
         </div>
 
         <div class="text-center">
-            <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
-            <p class="mt-4">Copyright 2022,Jovian</p>
+            <a type="button" href="hello@jovian.ai?subject=Question%20about%20job%20application&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20question%3A%20%3Center%20your%20question%3E" class="btn btn-primary btn-lg">Contact Us</a>
         </div>
-        
-
+        {%include 'foot.html' %}  
     </div>
    </body>
 </html>

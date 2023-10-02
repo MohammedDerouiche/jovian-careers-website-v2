@@ -37,5 +37,5 @@ def hello_hello():
 def list_jobs():
     return jsonify(JOBS)
 
-# if __name__ != "main":
-#     app.run(host="0.0.0.0", debug=True)
+if __name__ != "main":
+    app.run(debug=True)
