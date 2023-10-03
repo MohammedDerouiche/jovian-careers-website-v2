@@ -6,9 +6,15 @@
         </div>
         {% if 'salary' in job %}
         <div>
-            <b>Salary:</b> {{job['salary']}}
+            <b>Salary:</b> {{job['salary']}} ({{job['currency']}}'s)
         </div>
         {% endif %}
+        <div>
+            <b>Responsibilities:</b> {{job['responsibilities']}}
+        </div>
+        <div>
+            <b>Requirements:</b> {{job['requirements']}}
+        </div>
     </div>
     <div class="col-1">
         <a href="mailto:hello@jovian@ai?subject=Applying%20for%20{{job['title']}}%20job&body=I%20want%20to%20apply%20for%20a%20{{job['title']}}%20role%2C%20I%20think%20my%20skills%20and%20qualification%20feet%20the%20job%20requirement%20exactly%2C%20so%20I'll%20be%20happy%20to%20contact%20with%20you%20for%20job%20interview."type="button" class="btn btn-outline-primary">Apply</a>
